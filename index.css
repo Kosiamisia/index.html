@@ -1,0 +1,85 @@
+body {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  background: rgb(210, 101, 164);
+  background: linear-gradient(
+    90deg,
+    rgba(210, 101, 164, 1) 0%,
+    rgba(238, 203, 223, 1) 50%,
+    rgba(210, 101, 164, 1) 100%
+  );
+}
+
+h2,
+h1 {
+  font-family: "Lora", serif;
+}
+
+.heart {
+  fill: rgb(122, 61, 255);
+  position: relative;
+  top: 5px;
+  width: 70px;
+  animation: pulse 1s ease infinite; }
+   @keyframes pulse { 
+    0% { transform: scale(1); } 
+    50% { transform: scale(1.5); } 
+    100% { transform: scale(1); }
+    
+  }
+.letter {
+  background-color: #e7dcde;
+  width: 600px;
+  padding: 48px;
+  position: relative;
+  max-width: 90vw;
+  margin: 5vh auto;
+  border-radius: 15px;
+  border: 2px solid #6e4667;
+  -webkit-box-shadow: -2px -1px 90px 32px rgba(84, 201, 240, 1);
+  -moz-box-shadow: -2px -1px 90px 32px rgba(84, 201, 240, 1);
+  box-shadow: -2px -1px 90px 32px rgba(84, 201, 240, 1);
+}
+
+.modal-window {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.25);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 1.5s;
+}
+
+.modal-window > div {
+    border-radius: 15px;
+    border: 2px solid;
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2em;
+  background: #ffe4e4;
+  color: #333333;
+}
+
+.modal-close {
+  color: #261f1f;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+}
+
+.modal-window:target {
+  opacity: 1;
+  pointer-events: auto;
+}
